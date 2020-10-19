@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Class">
+
+    <ImageView
+        android:src="@drawable/ic_spacesuit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size45"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="@dimen/size25"
+                android:layout_height="@dimen/size25"
+                android:layout_marginLeft="@dimen/size15"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_back_button"
+                />
+
+            <TextView
+                android:id="@+id/homeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="@string/clas"
+                android:layout_margin="@dimen/size10"
+                android:textColor="@color/colorAccent2"
+                android:textSize="@dimen/text14"
+                android:layout_gravity="center"
+                />
+            <ImageView
+                android:id="@+id/homeButton"
+                android:layout_width="@dimen/size25"
+                android:layout_height="@dimen/size25"
+                android:layout_gravity="right"
+                android:layout_margin="@dimen/size10"
+                android:src="@drawable/ic_home_icon_silhouette_svgrepo_com"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/intoLayout"
+        app:layout_constraintTop_toBottomOf="@+id/topLayout"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/size20"
+        android:layout_marginRight="@dimen/size20"
+        android:layout_height="@dimen/size30">
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginRight="@dimen/size15"
+            android:layout_width="match_parent"
+            app:cardElevation="@dimen/size5"
+            app:cardMaxElevation="@dimen/size2"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:layout_margin="@dimen/size1"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/size3"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/scl"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text14" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/size3"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/sec"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text14" />
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/size3"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/clas"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text14" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/teachL"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/intoLayout"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/size25"
+        android:layout_marginRight="@dimen/size25"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/size100"
+            android:layout_margin="@dimen/size5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/techer"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_teacher"
+                android:layout_width="@dimen/size45"
+                android:layout_height="@dimen/size45"/>
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/techer"
+                android:layout_margin="@dimen/size3"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:text="Karthick (B.Ed)"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text14" />
+
+        </RelativeLayout>
+
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/login"
+                android:text="@string/tt"
+                android:textColor="@color/colorAccent"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:background="@color/colorAccent"
+                android:layout_marginTop="@dimen/size10"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size35"/>
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_marginLeft="@dimen/size25"
+        android:layout_marginRight="@dimen/size25"
+        app:layout_constraintTop_toBottomOf="@+id/teachL"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size100">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/border"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@+id/intoLayout"
+            android:layout_marginBottom="@dimen/size35"
+            android:layout_marginRight="@dimen/size20"
+            android:layout_marginLeft="@dimen/size20">
+        <TableRow
+            android:background="@drawable/border"
+            android:padding="5dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/text14"
+                android:textColor="@color/colorAccent2"
+                android:fontFamily="@font/open_sans_condensed_bold"
+                android:text="@string/sub" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/text14"
+                android:textColor="@color/colorAccent2"
+                android:fontFamily="@font/open_sans_condensed_bold"
+                android:text="@string/teacher" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/text14"
+                android:textColor="@color/colorAccent2"
+                android:fontFamily="@font/open_sans_condensed_bold"
+                android:text="@string/degree" />
+        </TableRow>
+            <TableRow
+                android:id="@+id/row1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/size10"
+                android:layout_width="match_parent"
+                android:layout_height="204dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:gravity="center"
+                    android:text="Maths"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="center"
+                    android:text="Suresh Dasari"
+                    android:textColor="@color/coloLGreyDark"
+                    android:textSize="@dimen/text13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:textColor="@color/coloLGreyDark"
+                    android:gravity="center"
+                    android:text="B.Ed"
+                    android:textSize="@dimen/text13" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row2"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/size10"
+                android:layout_width="match_parent"
+                android:layout_height="204dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:gravity="center"
+                    android:text="Science"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="center"
+                    android:text="Ashok"
+                    android:textColor="@color/coloLGreyDark"
+                    android:textSize="@dimen/text13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:textColor="@color/coloLGreyDark"
+                    android:gravity="center"
+                    android:text="B.E"
+                    android:textSize="@dimen/text13" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row3"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/size10"
+                android:layout_width="match_parent"
+                android:layout_height="204dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:gravity="center"
+                    android:text="Tamil"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="center"
+                    android:text="Ashok"
+                    android:textColor="@color/coloLGreyDark"
+                    android:textSize="@dimen/text13" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:textColor="@color/coloLGreyDark"
+                    android:gravity="center"
+                    android:text="B.E"
+                    android:textSize="@dimen/text13" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/size8"
+        android:layout_marginRight="@dimen/size25"
+        android:layout_marginLeft="@dimen/size25"
+        app:layout_constraintTop_toBottomOf="@+id/scroll"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:layout_weight="1"
+           android:orientation="vertical"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:fontFamily="@font/open_sans"
+               android:layout_gravity="center"
+               android:text="Support Staff"
+               android:textColor="@color/colorHint"
+               android:textSize="@dimen/text13" />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_weight="1"
+               android:fontFamily="@font/open_sans"
+               android:layout_gravity="center"
+               android:text="xxxxxxxxxx"
+               android:textColor="@color/black"
+               android:textSize="@dimen/text13" />
+
+       </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/open_sans"
+                android:layout_gravity="center"
+                android:text="Managment Staff"
+                android:textColor="@color/colorHint"
+                android:textSize="@dimen/text13" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/open_sans"
+                android:layout_gravity="center"
+                android:text="xxxxxxxxxx"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text13" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

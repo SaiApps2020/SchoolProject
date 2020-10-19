@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.student_response">
+
+    <ImageView
+        android:src="@drawable/ic_spacesuit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size50"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="@dimen/size25"
+                android:layout_height="@dimen/size25"
+                android:layout_marginLeft="@dimen/size15"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_back_button"
+                />
+
+            <TextView
+                android:id="@+id/homeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Student Response"
+                android:layout_margin="@dimen/size10"
+                android:textColor="@color/colorAccent2"
+                android:textSize="@dimen/text14"
+                android:layout_gravity="center"
+                />
+            <ImageView
+                android:id="@+id/homeButton"
+                android:layout_width="@dimen/size25"
+                android:layout_height="@dimen/size25"
+                android:layout_gravity="right"
+                android:layout_margin="@dimen/size10"
+                android:src="@drawable/ic_home_icon_silhouette_svgrepo_com"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/intoLayout"
+        app:layout_constraintTop_toBottomOf="@+id/topLayout"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/size20"
+        android:layout_marginRight="@dimen/size20"
+        android:layout_height="@dimen/size30">
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginRight="@dimen/size15"
+            android:layout_width="match_parent"
+            app:cardElevation="@dimen/size5"
+            app:cardMaxElevation="@dimen/size2"
+            app:cardBackgroundColor="@color/colorPrimary"
+            android:layout_margin="@dimen/size1"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/size3"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/scl"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text14" />
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/size3"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/sec"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text14" />
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/size3"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/clas"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text14" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/topLayout3"
+        app:layout_constraintLeft_toRightOf="@+id/intoLayout"
+        app:layout_constraintRight_toLeftOf="@+id/intoLayout"
+        app:layout_constraintTop_toBottomOf="@+id/intoLayout"
+        android:layout_marginLeft="@dimen/size25"
+        android:layout_marginRight="@dimen/size25"
+        android:layout_marginTop="@dimen/size5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/size50"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/size5"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="@dimen/size6"
+                android:fadingEdge="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/size6"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/sub"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text14" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/size5"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="@dimen/size6"
+                android:fadingEdge="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/size6"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/sec"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text14" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/size5"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="@dimen/size6"
+                android:fadingEdge="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/size6"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/assignmentName"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text14" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay2"
+            android:layout_below="@+id/lay1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/size5"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="@dimen/size6"
+                android:fadingEdge="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/size6"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/Lesson"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text14" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/size5"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="@dimen/size6"
+                android:fadingEdge="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/size6"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/page"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text14" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/size5"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="@dimen/size6"
+                android:fadingEdge="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/size6"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/date"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text14" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:weightSum="2"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/topLayout3"
+        android:layout_marginLeft="@dimen/size25"
+        android:layout_marginRight="@dimen/size25"
+        android:layout_marginTop="@dimen/size5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:layout_margin="@dimen/size3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:text="Have Questions?"
+                android:textColor="@color/coloLGreyDark"
+                android:textSize="@dimen/text14" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Question1" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkbox2"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Question2" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkbox3"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="Question3" />
+
+        </LinearLayout>
+
+      <LinearLayout
+          android:layout_margin="@dimen/size5"
+          android:layout_marginLeft="@dimen/size5"
+          android:background="@drawable/border_trans"
+          android:layout_weight="1"
+          android:layout_gravity="center"
+          android:gravity="center"
+          android:orientation="vertical"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:fontFamily="@font/open_sans"
+              android:gravity="center"
+              android:text="Mark the status"
+              android:textColor="@color/coloLGreyDark"
+              android:textSize="@dimen/text13" />
+
+          <RadioGroup
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+              <com.google.android.material.radiobutton.MaterialRadioButton
+                  android:id="@+id/radioButton1"
+                  android:layout_width="wrap_content"
+                  android:layout_height="@dimen/size23"
+                  android:text="Finished" />
+
+              <com.google.android.material.radiobutton.MaterialRadioButton
+                  android:id="@+id/radioButton2"
+                  android:layout_width="wrap_content"
+                  android:layout_height="@dimen/size23"
+                  android:text="Have Questions" />
+              <com.google.android.material.radiobutton.MaterialRadioButton
+                  android:id="@+id/radioButton4"
+                  android:layout_width="wrap_content"
+                  android:layout_height="@dimen/size23"
+                  android:text="Don't Understand" />
+
+          </RadioGroup>
+
+
+
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

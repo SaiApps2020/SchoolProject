@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    tools:context=".Activity.Homepage">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_undraw_graduation_opac" />
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size40"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/homeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/size10"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="@string/homePag"
+                android:textColor="@color/colorAccent2"
+                android:textSize="@dimen/text14" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/intoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size30"
+        android:layout_marginLeft="@dimen/size20"
+        android:layout_marginRight="@dimen/size20"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topLayout">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size1"
+            android:layout_marginLeft="@dimen/size15"
+            android:layout_marginRight="@dimen/size15"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardElevation="@dimen/size5"
+            app:cardMaxElevation="@dimen/size2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/size3"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="center"
+                    android:text="@string/scl"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/size3"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="center"
+                    android:text="@string/sec"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/size3"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="center"
+                    android:text="@string/clas"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text14" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/topLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size25"
+        android:gravity="center"
+        android:weightSum="3"
+        app:layout_constraintTop_toBottomOf="@+id/intoLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size6"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/assignLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/size3"
+                    android:layout_marginLeft="@dimen/size25"
+                    android:fadingEdgeLength="@dimen/size5"
+                    app:cardCornerRadius="@dimen/size20"
+                    app:cardElevation="@dimen/size8">
+
+                    <ImageView
+                        android:layout_width="@dimen/size30"
+                        android:layout_height="@dimen/size30"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/size5"
+                        android:src="@drawable/ic_assignment_24px" />
+
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Assignment(2)"
+                    android:textColor="@color/coloLGreyDark"
+                    android:textSize="@dimen/text11" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/examLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/size3"
+                    android:layout_marginLeft="@dimen/size25"
+                    android:fadingEdgeLength="@dimen/size5"
+                    app:cardCornerRadius="@dimen/size20"
+                    app:cardElevation="@dimen/size8">
+
+                    <ImageView
+                        android:layout_width="@dimen/size30"
+                        android:layout_height="@dimen/size30"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/size5"
+                        android:src="@drawable/ic_list_alt_24px" />
+
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Exam(3)"
+                    android:textColor="@color/coloLGreyDark"
+                    android:textSize="@dimen/text11" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/scoreLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/size3"
+                    android:layout_marginLeft="@dimen/size25"
+                    android:fadingEdgeLength="@dimen/size5"
+                    app:cardCornerRadius="@dimen/size20"
+                    app:cardElevation="@dimen/size8">
+
+                    <ImageView
+                        android:layout_width="@dimen/size30"
+                        android:layout_height="@dimen/size30"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/size5"
+                        android:src="@drawable/ic_event_note_24px" />
+
+                </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:text="@string/scor"
+                    android:textColor="@color/coloLGreyDark"
+                    android:textSize="@dimen/text11" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/size50"
+                        android:layout_height="@dimen/size50"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_principal"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/open_sans"
+                        android:text="@string/principal"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text11" />
+
+                    <ImageView
+                        android:layout_width="@dimen/size30"
+                        android:layout_height="@dimen/size30"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/size5"
+                        android:src="@drawable/ic_play_button" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/size50"
+                        android:layout_height="@dimen/size50"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_teacher"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/open_sans"
+                        android:text="@string/teacher"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text11" />
+
+                    <ImageView
+                        android:layout_width="@dimen/size30"
+                        android:layout_height="@dimen/size30"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/size5"
+                        android:src="@drawable/ic_play_button" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/search"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size35"
+                    android:layout_marginTop="@dimen/size5"
+                    android:background="@color/colorAccent"
+                    android:text="@string/search"
+                    android:textColor="@color/colorAccent" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/size6"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/classSec_Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/size3"
+                        android:layout_marginLeft="@dimen/size25"
+                        android:fadingEdgeLength="@dimen/size5"
+                        app:cardCornerRadius="@dimen/size20"
+                        app:cardElevation="@dimen/size8">
+
+                        <ImageView
+                            android:layout_width="@dimen/size30"
+                            android:layout_height="@dimen/size30"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/size5"
+                            android:src="@drawable/ic_assignment_ind_24px" />
+
+                    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/open_sans"
+                        android:text="@string/clas"
+                        android:textColor="@color/coloLGreyDark"
+                        android:textSize="@dimen/text11" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/subject_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/size3"
+                        android:layout_marginLeft="@dimen/size25"
+                        android:fadingEdgeLength="@dimen/size5"
+                        app:cardCornerRadius="@dimen/size20"
+                        app:cardElevation="@dimen/size8">
+
+                        <ImageView
+                            android:layout_width="@dimen/size30"
+                            android:layout_height="@dimen/size30"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/size5"
+                            android:src="@drawable/ic_import_contacts_24px" />
+
+                    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/open_sans"
+                        android:text="@string/sub"
+                        android:textColor="@color/coloLGreyDark"
+                        android:textSize="@dimen/text11" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/question_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/size3"
+                        android:layout_marginLeft="@dimen/size25"
+                        android:fadingEdgeLength="@dimen/size5"
+                        app:cardCornerRadius="@dimen/size20"
+                        app:cardElevation="@dimen/size8">
+
+                        <ImageView
+                            android:layout_width="@dimen/size30"
+                            android:layout_height="@dimen/size30"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/size5"
+                            android:src="@drawable/ic_contact_support_24px" />
+
+                    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/open_sans"
+                        android:text="@string/Ques"
+                        android:textColor="@color/coloLGreyDark"
+                        android:textSize="@dimen/text11" />
+                </LinearLayout>
+
+                <!--
+                                <Button
+                                    android:gravity="center"
+                                    android:id="@+id/myClass"
+                                    android:text="@string/clas"
+                                    android:textColor="@color/colorAccent"
+                                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                    android:background="@color/colorAccent"
+                                    android:layout_marginTop="@dimen/size10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/size35"/>
+                -->
+
+                <!--<Button
+                    android:layout_gravity="center"
+                    android:id="@+id/mySubject"
+                    android:text="@string/sub"
+                    android:textColor="@color/colorAccent"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:background="@color/colorAccent"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size35"/>-->
+                <!--<Button
+                    android:layout_gravity="center"
+                    android:id="@+id/questions"
+                    android:text="@string/Ques"
+                    android:textColor="@color/colorAccent"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:background="@color/colorAccent"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size35"/>-->
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/size270"
+            android:layout_height="@dimen/size35"
+            app:cardBackgroundColor="@color/colorAccent2"
+            app:cardCornerRadius="@dimen/size6"
+            app:cardElevation="@dimen/size8"
+            app:layout_constraintTop_toBottomOf="@+id/topLayout4">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_marginTop="@dimen/size2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="center"
+                    android:text="Live class | Tomorrow"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text11" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:gravity="center"
+                    android:text="TOPIC: Fundamental Physics"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text11" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

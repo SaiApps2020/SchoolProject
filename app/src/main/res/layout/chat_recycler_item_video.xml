@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/msgBody"
+        android:background="@drawable/rectagular_bg_chat_teacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/imageView"
+        app:layout_constraintVertical_bias="0.1"
+       >
+        <TextView
+            android:id="@+id/student"
+            android:text="Teacher"
+            android:fontFamily="@font/open_sans_semibold"
+            android:layout_marginLeft="@dimen/size5"
+            android:layout_marginTop="@dimen/size5"
+            android:textSize="@dimen/text10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+      <LinearLayout
+          android:layout_below="@+id/student"
+          android:orientation="horizontal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+          <VideoView
+              android:id="@+id/videoView"
+              android:layout_margin="@dimen/size10"
+              android:layout_width="@dimen/size220"
+              android:layout_height="@dimen/size150"></VideoView>
+
+          <TextView
+              android:layout_gravity="bottom"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginRight="@dimen/size5"
+              android:layout_marginBottom="@dimen/size2"
+              android:fontFamily="@font/open_sans"
+              android:text="12:09:90"
+              android:textSize="@dimen/text8" />
+
+      </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/size15"
+        android:layout_height="@dimen/size16"
+        android:src="@drawable/arrow_inverse"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/msgBody" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
